@@ -10,3 +10,11 @@ def home(request):
         'posts': posts
     }
     return render(request, 'blog/home.html', context)
+
+def detail(request, id):
+    post = get_object_or_404(Post, 'blog/home.html', context)
+
+    context = {
+        'post': post,
+    }
+    return render(request, 'blog/detail.html', context)
